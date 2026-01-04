@@ -1,50 +1,65 @@
-import { MessageCircle, Smartphone, Users, Shield, Zap, Globe } from 'lucide-react'
+import {
+  MessageCircle,
+  Smartphone,
+  Users,
+  Shield,
+  Zap,
+  Globe,
+  Send,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function KeyFeaturesSection() {
   const features = [
     {
       icon: MessageCircle,
       title: "WhatsApp Integration",
-      description: "Get AI-powered medical consultations directly through WhatsApp. No app downloads needed - just message your symptoms and get instant, accurate diagnoses in Luganda, English, and other local languages.",
+      description:
+        "Get AI-powered medical consultations directly through WhatsApp. No app downloads needed - just message your symptoms and get instant, accurate diagnoses in Luganda, English, and other local languages.",
       color: "text-green-600",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       icon: Smartphone,
       title: "Universal Accessibility",
-      description: "Designed for every Ugandan, regardless of location, device, or connectivity. Works on basic phones, feature phones, and smartphones with offline capabilities for rural areas.",
+      description:
+        "Designed for every Ugandan, regardless of location, device, or connectivity. Works on basic phones, feature phones, and smartphones with offline capabilities for rural areas.",
       color: "text-blue-600",
-      bgColor: "bg-blue-50"
+      bgColor: "bg-blue-50",
     },
     {
       icon: Users,
       title: "Multilingual Support",
-      description: "Full support for Uganda's languages: Luganda, Runyankole, Acholi, Swahili, and English. AI understands and responds in your preferred language for better healthcare access.",
+      description:
+        "Full support for Uganda's languages: Luganda, Runyankole, Acholi, Swahili, and English. AI understands and responds in your preferred language for better healthcare access.",
       color: "text-purple-600",
-      bgColor: "bg-purple-50"
+      bgColor: "bg-purple-50",
     },
     {
       icon: Shield,
       title: "Privacy-First Design",
-      description: "Your health data belongs to you. Full control over who accesses your information, with bank-grade encryption and compliance with Ugandan data protection laws.",
+      description:
+        "Your health data belongs to you. Full control over who accesses your information, with bank-grade encryption and compliance with Ugandan data protection laws.",
       color: "text-teal-600",
-      bgColor: "bg-teal-50"
+      bgColor: "bg-teal-50",
     },
     {
       icon: Zap,
       title: "Instant AI Diagnostics",
-      description: "Get accurate medical assessments in seconds, not days. AI trained on Ugandan health patterns provides reliable diagnoses and treatment recommendations.",
+      description:
+        "Get accurate medical assessments in seconds, not days. AI trained on Ugandan health patterns provides reliable diagnoses and treatment recommendations.",
       color: "text-orange-600",
-      bgColor: "bg-orange-50"
+      bgColor: "bg-orange-50",
     },
     {
       icon: Globe,
       title: "Nationwide Coverage",
-      description: "Connected to 1000+ healthcare providers across Uganda. Seamless referrals, telemedicine, and emergency response coordination nationwide.",
+      description:
+        "Connected to 1000+ healthcare providers across Uganda. Seamless referrals, telemedicine, and emergency response coordination nationwide.",
       color: "text-red-600",
-      bgColor: "bg-red-50"
-    }
-  ]
+      bgColor: "bg-red-50",
+    },
+  ];
 
   return (
     <section className="bg-white py-20">
@@ -57,8 +72,9 @@ export default function KeyFeaturesSection() {
             Healthcare That Works for Every Ugandan
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mediloop's breakthrough features make quality healthcare accessible to all Ugandans,
-            regardless of location, device, or language barriers.
+            Mediloop's breakthrough features make quality healthcare accessible
+            to all Ugandans, regardless of location, device, or language
+            barriers.
           </p>
         </div>
 
@@ -89,11 +105,12 @@ export default function KeyFeaturesSection() {
                 Try It Now: WhatsApp Consultation
               </h3>
               <p className="text-gray-700 mb-6">
-                Experience Mediloop's AI diagnostics through WhatsApp. Message your symptoms
-                and get instant medical guidance in your preferred language.
+                Experience Mediloop's AI diagnostics through WhatsApp. Message
+                your symptoms and get instant medical guidance in your preferred
+                language.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <Link
                   href="https://wa.me/256700000000?text=Hello%20Mediloop"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -101,7 +118,7 @@ export default function KeyFeaturesSection() {
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Start WhatsApp Chat
-                </a>
+                </Link>
                 <button className="inline-flex items-center border border-teal-600 text-teal-600 hover:bg-teal-50 px-6 py-3 rounded-lg font-medium">
                   Watch Demo Video
                 </button>
@@ -119,17 +136,27 @@ export default function KeyFeaturesSection() {
               <div className="p-4 space-y-3 max-h-64 overflow-y-auto">
                 <div className="flex justify-start">
                   <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm text-gray-800">Hello! I'm Mediloop's AI assistant. How can I help you today?</p>
+                    <p className="text-sm text-gray-800">
+                      Hello! I'm Mediloop's AI assistant. How can I help you
+                      today?
+                    </p>
                   </div>
                 </div>
                 <div className="flex justify-end">
                   <div className="bg-green-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm text-gray-800">I have a persistent cough and fever</p>
+                    <p className="text-sm text-gray-800">
+                      I have a persistent cough and fever
+                    </p>
                   </div>
                 </div>
                 <div className="flex justify-start">
                   <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                    <p className="text-sm text-gray-800">Based on your symptoms, this could be respiratory infection. Please consult a healthcare provider for proper diagnosis. Would you like me to connect you to a nearby clinic?</p>
+                    <p className="text-sm text-gray-800">
+                      Based on your symptoms, this could be respiratory
+                      infection. Please consult a healthcare provider for proper
+                      diagnosis. Would you like me to connect you to a nearby
+                      clinic?
+                    </p>
                   </div>
                 </div>
               </div>
@@ -141,7 +168,7 @@ export default function KeyFeaturesSection() {
                     className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   />
                   <button className="bg-green-600 hover:bg-green-700 text-white p-2 rounded-full">
-                    <MessageCircle className="w-4 h-4" />
+                    <Send className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -150,5 +177,5 @@ export default function KeyFeaturesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
