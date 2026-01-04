@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ChevronDown } from 'lucide-react'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -19,7 +19,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center" aria-label="Mediloop home">
+            <Link
+              href="/"
+              className="flex items-center"
+              aria-label="Mediloop home"
+            >
               <img
                 src="/assets/mediloop.png"
                 alt="Mediloop logo"
@@ -31,31 +35,94 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Main navigation links for Mediloop's core pages */}
-            <a href="/platform" className="text-gray-700 hover:text-gray-900 font-medium">Platform</a>
-            <a href="/uhid" className="text-gray-700 hover:text-gray-900 font-medium">Universal Health ID</a>
-            <a href="/providers" className="text-gray-700 hover:text-gray-900 font-medium">Provider Network</a>
-            <a href="/data-control" className="text-gray-700 hover:text-gray-900 font-medium">Citizen Data Control</a>
-            <a href="/services" className="text-gray-700 hover:text-gray-900 font-medium">Digital Services</a>
+            <Link
+              href="/platform"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              Platform
+            </Link>
+            <Link
+              href="/uhid"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              Universal Health ID
+            </Link>
+            <Link
+              href="/providers"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              Provider Network
+            </Link>
+            <Link
+              href="/data-control"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              Citizen Data Control
+            </Link>
+            <Link
+              href="/services"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              Digital Services
+            </Link>
 
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
                 About Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <a href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Blog</a>
-                <a href="/klas" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">KLAS</a>
-                <a href="/newsletter" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Newsletter</a>
-                <a href="/team" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Team</a>
-                <a href="/careers" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Careers</a>
-                <a href="/press" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Press</a>
-                <a href="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Contact</a>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/klas"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  KLAS
+                </Link>
+                <Link
+                  href="/newsletter"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Newsletter
+                </Link>
+                <Link
+                  href="/team"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Team
+                </Link>
+                <Link
+                  href="/careers"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Careers
+                </Link>
+                <Link
+                  href="/press"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Press
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Contact
+                </Link>
               </div>
             </div>
           </nav>
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden lg:inline-flex text-gray-700 hover:text-gray-900">
+            <Button
+              variant="ghost"
+              className="hidden lg:inline-flex text-gray-700 hover:text-gray-900"
+            >
               Sign in
             </Button>
             <button
@@ -64,8 +131,18 @@ export default function Header() {
               aria-label="Toggle menu"
             >
               <span className="sr-only">Open menu</span>
-              <svg className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="h-6 w-6 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -75,28 +152,92 @@ export default function Header() {
         {mounted && isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="space-y-2">
-              <a href="/platform" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Platform</a>
-              <a href="/uhid" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Universal Health ID</a>
-              <a href="/providers" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Provider Network</a>
-              <a href="/data-control" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Citizen Data Control</a>
-              <a href="/services" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Digital Services</a>
-              
+              <Link
+                href="/platform"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Platform
+              </Link>
+              <Link
+                href="/uhid"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Universal Health ID
+              </Link>
+              <Link
+                href="/providers"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Provider Network
+              </Link>
+              <Link
+                href="/data-control"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Citizen Data Control
+              </Link>
+              <Link
+                href="/services"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Digital Services
+              </Link>
+
               <div className="border-t border-gray-200 pt-2 mt-2">
-                <p className="text-sm font-medium text-gray-500 mb-2">About Us</p>
-                <a href="/blog" className="block py-1 text-gray-700 hover:text-gray-900">Blog</a>
-                <a href="/klas" className="block py-1 text-gray-700 hover:text-gray-900">KLAS</a>
-                <a href="/newsletter" className="block py-1 text-gray-700 hover:text-gray-900">Newsletter</a>
-                <a href="/team" className="block py-1 text-gray-700 hover:text-gray-900">Team</a>
-                <a href="/careers" className="block py-1 text-gray-700 hover:text-gray-900">Careers</a>
-                <a href="/press" className="block py-1 text-gray-700 hover:text-gray-900">Press</a>
-                <a href="/contact" className="block py-1 text-gray-700 hover:text-gray-900">Contact</a>
+                <p className="text-sm font-medium text-gray-500 mb-2">
+                  About Us
+                </p>
+                <Link
+                  href="/blog"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/klas"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  KLAS
+                </Link>
+                <Link
+                  href="/newsletter"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Newsletter
+                </Link>
+                <Link
+                  href="/team"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Team
+                </Link>
+                <Link
+                  href="/careers"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Careers
+                </Link>
+                <Link
+                  href="/press"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Press
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Contact
+                </Link>
               </div>
-              
-              <Button variant="ghost" className="mt-4 w-full justify-start">Sign in</Button>
+
+              <Button variant="ghost" className="mt-4 w-full justify-start">
+                Sign in
+              </Button>
             </div>
           </div>
         )}
       </div>
     </header>
-  )
+  );
 }

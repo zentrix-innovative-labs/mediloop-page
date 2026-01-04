@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function IntegrationsSection() {
   return (
@@ -38,7 +39,7 @@ export default function IntegrationsSection() {
         </div>
 
         <div className="text-center mt-8">
-          <a
+          <Link
             href="https://mediloop.co/integrations"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
             target="_blank"
@@ -46,9 +47,9 @@ export default function IntegrationsSection() {
           >
             View all Uganda integrations
             <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }

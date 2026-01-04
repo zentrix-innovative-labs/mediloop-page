@@ -1,14 +1,9 @@
-'use client'
+"use client";
 
-
-import { Star } from 'lucide-react'
+import { Star } from "lucide-react";
+import Link from "next/link";
 
 export default function TestimonialsSection() {
-
-
-
-
-
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
@@ -21,15 +16,17 @@ export default function TestimonialsSection() {
           ))}
         </div>
         <p className="text-lg text-gray-700 mb-8">
-          Be among the first to experience secure, AI-powered healthcare access for all Ugandans. Universal Health ID, instant AI diagnostics, and seamless provider connections - coming soon!
+          Be among the first to experience secure, AI-powered healthcare access
+          for all Ugandans. Universal Health ID, instant AI diagnostics, and
+          seamless provider connections - coming soon!
         </p>
-        <a
+        <Link
           href="mailto:info@mediloop.co"
           className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold shadow hover:bg-teal-700 transition"
         >
           Join the waitlist
-        </a>
+        </Link>
       </div>
     </section>
-  )
+  );
 }

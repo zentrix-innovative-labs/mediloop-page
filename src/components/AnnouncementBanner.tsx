@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AnnouncementBanner() {
   return (
@@ -9,18 +10,19 @@ export default function AnnouncementBanner() {
             Mediloop: Digitalising Healthcare for Uganda
           </span>
           <span className="text-teal-700 text-sm sm:text-base">
-            Universal access. Every citizen in control of their medical data - anywhere, anytime.
+            Universal access. Every citizen in control of their medical data -
+            anywhere, anytime.
           </span>
-          <a
+          <Link
             href="https://mediloop.ai/launch"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-teal-900 text-white border border-teal-900 hover:bg-teal-800 hover:border-teal-800 rounded px-4 py-2 text-sm"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

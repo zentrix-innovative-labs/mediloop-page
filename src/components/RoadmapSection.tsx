@@ -2,20 +2,23 @@ export default function RoadmapSection() {
   const features = [
     {
       title: "Phase 1: National Foundation (2025)",
-      description: "UHID rollout for every Ugandan citizen, AI diagnostics via WhatsApp, and launch with 100+ clinics, hospitals, and pharmacies.",
-      icon: "🇺🇬"
+      description:
+        "UHID rollout for every Ugandan citizen, AI diagnostics via WhatsApp, and launch with 100+ clinics, hospitals, and pharmacies.",
+      icon: "🇺🇬",
     },
     {
       title: "Phase 2: Expansion & Analytics (2026)",
-      description: "Advanced AI for more conditions and languages, government analytics, and expansion to all major regions in Uganda.",
-      icon: "�"
+      description:
+        "Advanced AI for more conditions and languages, government analytics, and expansion to all major regions in Uganda.",
+      icon: "📈",
     },
     {
       title: "Phase 3: Scale & Innovation (2027+)",
-      description: "Full national coverage, mobile apps for patients and providers, and secure, anonymized health data platform for research.",
-      icon: "🚀"
-    }
-  ]
+      description:
+        "Full national coverage, mobile apps for patients and providers, and secure, anonymized health data platform for research.",
+      icon: "🚀",
+    },
+  ];
 
   return (
     <section className="bg-gray-50 py-20">
@@ -28,7 +31,8 @@ export default function RoadmapSection() {
             Building Uganda's Digital Health Future
           </h2>
           <p className="text-xl text-gray-600">
-            See how Mediloop is rolling out secure, AI-powered healthcare for all Ugandans
+            See how Mediloop is rolling out secure, AI-powered healthcare for
+            all Ugandans
           </p>
         </div>
 
@@ -42,9 +46,7 @@ export default function RoadmapSection() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+              <p className="text-gray-600">{feature.description}</p>
 
               {/* Mock interface preview */}
               <div className="mt-6 bg-white rounded-lg p-4 shadow-sm">
@@ -66,5 +68,5 @@ export default function RoadmapSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
