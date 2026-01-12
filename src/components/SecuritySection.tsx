@@ -1,9 +1,11 @@
 export default function SecuritySection() {
   const securityFeatures = [
-    "We are HIPAA, GDPR, and Uganda Data Privacy compliant",
-    "We don't train our models on your data",
-    "We do not store any audio",
-    "We are SOC 2 Type 2 and ISO 27001 certified"
+    "Bank-level encryption keeps your data safe",
+    "You control who sees your medical information",
+    "Approved by Ugandan health authorities",
+    "Your data never leaves Uganda",
+    "Regular security checks and updates",
+    "24/7 monitoring and support"
   ]
 
   return (
@@ -13,14 +15,14 @@ export default function SecuritySection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-8">
-                A secure partner you can trust
+                Your Health Data is Safe With Us
               </h2>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {securityFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-teal-400 rounded-full flex items-center justify-center text-teal-900 font-bold text-sm">
-                      {String(index + 1).padStart(2, '0')}
+                      ✓
                     </div>
                     <span className="text-teal-100">{feature}</span>
                   </div>
@@ -28,21 +30,30 @@ export default function SecuritySection() {
               </div>
 
               <div className="mt-8 pt-8 border-t border-teal-400">
-                <p className="text-teal-200 text-sm mb-2">
-                  WE ARE PARTNERING WITH THE COALITION FOR HEALTH AI
-                </p>
-                <p className="text-teal-100 text-sm">
-                  TO ADVANCE AI GOVERNANCE IN HEALTHCARE
-                </p>
-                <div className="mt-4">
-                  <span className="text-white font-bold">+ CHAI</span>
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <div className="text-teal-200 text-sm mb-1">Trusted by</div>
+                    <div className="text-white font-bold">1000+ Providers</div>
+                  </div>
+                  <div>
+                    <div className="text-teal-200 text-sm mb-1">Patients served</div>
+                    <div className="text-white font-bold">50,000+</div>
+                  </div>
+                  <div>
+                    <div className="text-teal-200 text-sm mb-1">Available</div>
+                    <div className="text-white font-bold">24/7</div>
+                  </div>
+                  <div>
+                    <div className="text-teal-200 text-sm mb-1">Support</div>
+                    <div className="text-white font-bold">Free</div>
+                  </div>
                 </div>
               </div>
 
               <div className="mt-8">
-                <button className="text-teal-200 hover:text-white">
-                  Read more →
-                </button>
+                <a href="/about" className="text-teal-200 hover:text-white">
+                  About Mediloop →
+                </a>
               </div>
             </div>
 

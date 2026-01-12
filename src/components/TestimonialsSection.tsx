@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
     <section className="bg-gray-50 py-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Mediloop is launching soon in Uganda
+          Trusted by Healthcare Providers Across Uganda
         </h2>
         <div className="flex items-center justify-center space-x-1 mb-8">
           {[...Array(5)].map((_, i) => (
@@ -21,13 +21,15 @@ export default function TestimonialsSection() {
           ))}
         </div>
         <p className="text-lg text-gray-700 mb-8">
-          Be among the first to experience secure, AI-powered healthcare access for all Ugandans. Universal Health ID, instant AI diagnostics, and seamless provider connections - coming soon!
+          Join thousands of Ugandans already using Mediloop for secure healthcare access. Get your Universal Health ID, instant medical advice, and seamless provider connections.
         </p>
         <a
-          href="mailto:info@mediloop.co"
+          href="https://app.mediloop.co"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold shadow hover:bg-teal-700 transition"
         >
-          Join the waitlist
+          Get Started
         </a>
       </div>
     </section>

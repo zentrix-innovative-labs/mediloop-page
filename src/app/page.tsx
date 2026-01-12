@@ -4,16 +4,9 @@ import HeroSection from '@/components/HeroSection'
 import PartnersSection from '@/components/PartnersSection'
 import KeyFeaturesSection from '@/components/KeyFeaturesSection'
 import ClinicalDocSection from '@/components/ClinicalDocSection'
-import IntegrationsSection from '@/components/IntegrationsSection'
-import TestimonialsSection from '@/components/TestimonialsSection'
-import SpecialtiesSection from '@/components/SpecialtiesSection'
-import TemplatesSection from '@/components/TemplatesSection'
-import RoadmapSection from '@/components/RoadmapSection'
-import SettingsSection from '@/components/SettingsSection'
-import ExpertiseSection from '@/components/ExpertiseSection'
-import LeadersSection from '@/components/LeadersSection'
+import DevelopersSection from '@/components/DevelopersSection'
 import SecuritySection from '@/components/SecuritySection'
-import PressSection from '@/components/PressSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -21,20 +14,13 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <AnnouncementBanner />
-  <HeroSection />
-  <PartnersSection />
-  <KeyFeaturesSection />
+      <HeroSection />
+      <PartnersSection />
+      <KeyFeaturesSection />
       <ClinicalDocSection />
-      <IntegrationsSection />
-      <TestimonialsSection />
-      <SpecialtiesSection />
-      <TemplatesSection />
-      <RoadmapSection />
-      <SettingsSection />
-      <ExpertiseSection />
-      <LeadersSection />
+      <DevelopersSection />
       <SecuritySection />
-      <PressSection />
+      <TestimonialsSection />
       <Footer />
     </main>
   )

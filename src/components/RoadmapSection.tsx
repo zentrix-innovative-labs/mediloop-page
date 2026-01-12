@@ -1,63 +1,111 @@
 export default function RoadmapSection() {
-  const features = [
+  const phases = [
     {
-      title: "Phase 1: National Foundation (2025)",
-      description: "UHID rollout for every Ugandan citizen, AI diagnostics via WhatsApp, and launch with 100+ clinics, hospitals, and pharmacies.",
-      icon: "🇺🇬"
+      title: "Current: Production Services",
+      description: "Auth Service (Keycloak), AI Service (II-Medical-8B), WhatsApp Service, FHIR Server (HAPI FHIR), API Gateway (Kong), UHID & Provider Services operational.",
+      icon: "✅",
+      status: "Live"
     },
     {
-      title: "Phase 2: Expansion & Analytics (2026)",
-      description: "Advanced AI for more conditions and languages, government analytics, and expansion to all major regions in Uganda.",
-      icon: "�"
+      title: "Phase 1C: FHIR Enhancement",
+      description: "Complete FHIR-first reads (60% utilization), Encounter Service, full UHID-FHIR integration, Terminology Service expansion, Care Coordination complete.",
+      icon: "🔄",
+      status: "In Progress"
     },
     {
-      title: "Phase 3: Scale & Innovation (2027+)",
-      description: "Full national coverage, mobile apps for patients and providers, and secure, anonymized health data platform for research.",
-      icon: "🚀"
+      title: "Phase 2: Healthcare Services",
+      description: "Pharmacy Service, Lab Service (LIS), Imaging Service, Billing & Claims, Mobile Money integration (MTN, Airtel), Patient & Provider portals launch.",
+      icon: "🏥",
+      status: "Month 2"
+    },
+    {
+      title: "Phase 3: National Scale",
+      description: "MOH eMIS integration, Event-driven architecture (Kafka), Disaster recovery, Analytics platform, Developer ecosystem, 90%+ FHIR utilization.",
+      icon: "🚀",
+      status: "Month 3+"
     }
   ]
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-teal-600 font-medium uppercase tracking-wide text-sm mb-4">
-            UGANDA LAUNCH ROADMAP
+            SERVICE ARCHITECTURE & ROADMAP
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Building Uganda's Digital Health Future
+            23 Microservices. One Unified Platform.
           </h2>
           <p className="text-xl text-gray-600">
-            See how Mediloop is rolling out secure, AI-powered healthcare for all Ugandans
+            FHIR-first architecture with production services live and complete healthcare ecosystem launching in phases
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-teal-50 to-green-50 rounded-2xl p-8 text-center"
+              className="bg-gradient-to-br from-teal-50 to-green-50 rounded-2xl p-6 border border-teal-100"
             >
-              <div className="text-4xl mb-6">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-
-              {/* Mock interface preview */}
-              <div className="mt-6 bg-white rounded-lg p-4 shadow-sm">
-                <div className="h-20 bg-gradient-to-br from-purple-100 to-teal-100 rounded mb-3"></div>
-                <div className="space-y-2">
-                  <div className="h-2 bg-gray-200 rounded"></div>
-                  <div className="h-2 bg-gray-200 rounded w-3/4"></div>
-                  <div className="h-2 bg-gray-200 rounded w-1/2"></div>
-                </div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-3xl">{phase.icon}</div>
+                <span className="text-sm font-semibold text-teal-700 bg-white px-3 py-1 rounded-full">
+                  {phase.status}
+                </span>
               </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                {phase.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {phase.description}
+              </p>
             </div>
           ))}
         </div>
+
+        {/* Service Categories */}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h4 className="font-bold text-gray-900 mb-4">Core Services (Live)</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>✅ Auth Service (Keycloak)</li>
+              <li>✅ AI Service (II-Medical-8B)</li>
+              <li>✅ WhatsApp Service</li>
+              <li>✅ FHIR Server (HAPI FHIR)</li>
+              <li>✅ API Gateway (Kong)</li>
+              <li>⚠️ UHID Service (35%)</li>
+              <li>⚠️ Provider Service (35%)</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h4 className="font-bold text-gray-900 mb-4">Clinical Services (Q1 2026)</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>🔄 Encounter Service</li>
+              <li>🔄 Care Coordination</li>
+              <li>🔄 Appointment Service</li>
+              <li>📅 Lab Service (LIS)</li>
+              <li>📅 Pharmacy Service</li>
+              <li>📅 Imaging Service</li>
+              <li>📅 Prescription Service</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h4 className="font-bold text-gray-900 mb-4">Platform Services (Q2 2026)</h4>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>📅 Billing & Claims</li>
+              <li>📅 Consent Management</li>
+              <li>📅 Notification Service</li>
+              <li>📅 Analytics Platform</li>
+              <li>📅 Audit Trail</li>
+              <li>📅 Document Service</li>
+              <li>📅 Terminology Service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
         <div className="text-center mt-12">
           <button className="text-teal-600 hover:text-teal-700 font-medium">

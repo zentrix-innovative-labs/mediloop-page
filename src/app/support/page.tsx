@@ -9,153 +9,115 @@ import Footer from '@/components/Footer'
 export default function SupportPage() {
   const faqs = [
     {
-      question: "How do I get my UHID?",
-      answer: "You can apply for your UHID through our web platform or mobile app. The process involves identity verification and takes approximately 24-48 hours."
+      question: "How do I get my Universal Health ID?",
+      answer: "Visit app.mediloop.co to create your account. You'll need your National ID for verification. Your UHID will be created instantly and you can start using it immediately."
     },
     {
       question: "Is my health data secure?",
-      answer: "Yes, Mediloop uses bank-grade encryption and follows strict privacy regulations. You have full control over who can access your data."
+      answer: "Yes. Mediloop uses end-to-end encryption and bank-grade security. You control who can access your records and can revoke access anytime. All data is stored securely in compliance with Uganda's Data Protection Act 2019."
     },
     {
       question: "How do I book an appointment?",
-      answer: "Use the Mediloop app or web platform to search for providers, check availability, and book appointments directly."
+      answer: "Message us on WhatsApp at +256 775 035244 or use the patient portal at app.mediloop.co to search for doctors, view available slots, and book appointments instantly."
     },
     {
-      question: "What if I forget my password?",
-      answer: "Click 'Forgot Password' on the login page. We'll send a secure reset link to your registered email address."
+      question: "Can I get medical advice on WhatsApp?",
+      answer: "Yes. Send your health questions to our WhatsApp number +256 775 035244. Our AI system provides instant guidance, and you can connect with a doctor if needed."
     },
     {
-      question: "Can I access my records offline?",
-      answer: "Yes, our mobile app allows you to download and view your essential health records offline for up to 30 days."
+      question: "How do I share my records with my doctor?",
+      answer: "When you visit any connected healthcare facility, simply provide your UHID. Your doctor will request access and you can approve it instantly from your phone."
     },
     {
-      question: "How do I connect with healthcare providers?",
-      answer: "Search for providers in your area through our platform. You can view their profiles, read reviews, and book appointments."
-    }
-  ]
-
-  const resources = [
-    {
-      title: "User Guide",
-      description: "Complete guide to using Mediloop platform",
-      icon: "📖"
-    },
-    {
-      title: "Video Tutorials",
-      description: "Step-by-step video guides",
-      icon: "🎥"
-    },
-    {
-      title: "API Documentation",
-      description: "Technical documentation for developers",
-      icon: "💻"
-    },
-    {
-      title: "Security Center",
-      description: "Privacy and security information",
-      icon: "🔒"
+      question: "What if I don't have internet?",
+      answer: "Your UHID works offline. Healthcare providers can access your essential records even without internet. You can also download key documents to your phone for offline viewing."
     }
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Support Center</h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Get help with Mediloop. Find answers to common questions and access our support resources.
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Support Center</h1>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            Get help with your health records, appointments, and Mediloop services.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div className="bg-white rounded-2xl p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-gray-200 pb-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                    <p className="text-gray-700">{faq.answer}</p>
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-0">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                    <p className="text-sm sm:text-base text-gray-700">{faq.answer}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Quick Support</h3>
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-white rounded-2xl p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-6">Contact Support</h3>
               <div className="space-y-4">
-                <a href="/contact" className="block p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">💬</span>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Live Chat</h4>
-                      <p className="text-gray-700 text-sm">Chat with our support team</p>
-                    </div>
+                <a href="https://wa.me/256775035244" target="_blank" rel="noopener noreferrer" className="block p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition">
+                  <div>
+                    <h4 className="font-semibold text-gray-900">WhatsApp Support</h4>
+                    <p className="text-gray-700 text-sm">+256 775 035244</p>
+                    <p className="text-gray-600 text-xs mt-1">Available 24/7</p>
                   </div>
                 </a>
                 <a href="mailto:support@mediloop.co" className="block p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">📧</span>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Email Support</h4>
-                      <p className="text-gray-700 text-sm">support@mediloop.co</p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email Support</h4>
+                    <p className="text-gray-700 text-sm">support@mediloop.co</p>
+                    <p className="text-gray-600 text-xs mt-1">Response within 24 hours</p>
                   </div>
                 </a>
-                <a href="tel:+256414320000" className="block p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">📞</span>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Phone Support</h4>
-                      <p className="text-gray-700 text-sm">+256 414 320 000</p>
-                    </div>
+                <a href="tel:+256775035244" className="block p-4 bg-teal-50 rounded-lg hover:bg-teal-100 transition">
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Phone Support</h4>
+                    <p className="text-gray-700 text-sm">+256 775 035244</p>
+                    <p className="text-gray-600 text-xs mt-1">Mon-Fri, 8am-6pm</p>
                   </div>
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">System Status</h3>
+            <div className="bg-white rounded-2xl p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Office Location</h3>
+              <p className="text-sm sm:text-base text-gray-700">
+                Plot 19-21 PortBell Road<br />
+                Nakawa, Kampala<br />
+                Uganda
+              </p>
+              <p className="text-sm text-gray-600 mt-4">
+                Mon-Fri: 8:00 AM - 6:00 PM EAT
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">System Status</h3>
               <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                <span className="text-gray-900 font-medium">All Systems Operational</span>
+                <span className="text-gray-900 font-medium text-sm sm:text-base">All Systems Operational</span>
               </div>
-              <p className="text-gray-700 text-sm mb-4">
-                View real-time status of Mediloop services and planned maintenance.
+              <p className="text-sm text-gray-700">
+                All Mediloop services are running normally.
               </p>
-              <a href="#" className="text-teal-600 hover:text-teal-700 font-semibold text-sm">
-                View Status Page →
-              </a>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-12 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Help Resources</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{resource.icon}</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{resource.title}</h3>
-                <p className="text-gray-700 text-sm mb-4">{resource.description}</p>
-                <button className="text-teal-600 hover:text-teal-700 font-semibold text-sm">
-                  Access →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-2xl p-12 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
-          <p className="text-xl mb-8">Our support team is here to assist you with any questions.</p>
-          <a href="/contact" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-            Contact Support
+        <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-2xl p-8 sm:p-12 text-white text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Need More Help?</h2>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8">Our support team is available 24/7 to assist you.</p>
+          <a href="https://wa.me/256775035244" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-teal-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Chat on WhatsApp
           </a>
         </div>
       </main>

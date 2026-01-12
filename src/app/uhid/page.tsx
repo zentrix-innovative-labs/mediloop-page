@@ -10,68 +10,69 @@ export default function UHIDPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Universal Health ID (UHID)</h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            The Universal Health ID (UHID) is a secure, lifelong health identity for every Ugandan. It enables seamless access to care, secure data sharing, and true ownership of your medical records - anywhere, anytime.
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Universal Health ID</h1>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            Your lifetime health identity. One ID for all your medical records, accessible anywhere in Uganda.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white rounded-lg p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">How UHID Works</h3>
-            <p className="text-gray-700 mb-6">
-              Your UHID is linked to your national ID and provides a single, secure way to access healthcare services across Uganda.
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">How Your UHID Works</h3>
+            <p className="text-sm sm:text-base text-gray-700 mb-6">
+              Your Universal Health ID is linked to your National ID and gives you instant access to healthcare services across Uganda.
             </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Register once, access everywhere</li>
-              <li>• Secure biometric verification</li>
-              <li>• Integrated with government systems</li>
-              <li>• Works offline in remote areas</li>
+            <ul className="text-sm sm:text-base text-gray-600 space-y-2">
+              <li>• Register once, use everywhere</li>
+              <li>• Secure verification with your National ID</li>
+              <li>• Works at all connected facilities</li>
+              <li>• Available even in areas with limited internet</li>
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Benefits for Citizens</h3>
-            <p className="text-gray-700 mb-6">
-              UHID empowers every Ugandan with control over their health data and seamless access to care.
+          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Benefits for You</h3>
+            <p className="text-sm sm:text-base text-gray-700 mb-6">
+              Take control of your health records and get better care wherever you go.
             </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• No more lost medical records</li>
-              <li>• Faster emergency care</li>
-              <li>• Access to telemedicine</li>
-              <li>• Better health outcomes</li>
+            <ul className="text-sm sm:text-base text-gray-600 space-y-2">
+              <li>• Never lose your medical records again</li>
+              <li>• Faster treatment in emergencies</li>
+              <li>• Access doctors via WhatsApp</li>
+              <li>• Share records securely with any doctor</li>
+              <li>• Track your health history over time</li>
             </ul>
           </div>
         </div>
 
-        <div className="bg-teal-50 rounded-2xl p-12 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">UHID Implementation Roadmap</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="bg-teal-50 rounded-2xl p-8 sm:p-12 mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Getting Started is Easy</h2>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold mb-2">Pilot Launch</h3>
-              <p className="text-gray-700">Starting in Kampala with 100 clinics</p>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl mx-auto mb-4">1</div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Create Account</h3>
+              <p className="text-sm sm:text-base text-gray-700">Visit app.mediloop.co and register with your National ID</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold mb-2">National Rollout</h3>
-              <p className="text-gray-700">Expanding to all regions in Uganda</p>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl mx-auto mb-4">2</div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Get Your UHID</h3>
+              <p className="text-sm sm:text-base text-gray-700">Your Universal Health ID is created instantly</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold mb-2">Full Integration</h3>
-              <p className="text-gray-700">Connected to all health systems</p>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl mx-auto mb-4">3</div>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">Start Using</h3>
+              <p className="text-sm sm:text-base text-gray-700">Book appointments, consult doctors, manage your health</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-2xl p-12 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Get Your UHID Today</h2>
-          <p className="text-xl mb-8">Register for your Universal Health ID and take control of your healthcare journey.</p>
-          <a href="/contact" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-            Register Now
+        <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-2xl p-8 sm:p-12 text-white text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Get Your Universal Health ID Today</h2>
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8">Join thousands of Ugandans taking control of their health records.</p>
+          <a href="https://app.mediloop.co" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-teal-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Create Your UHID
           </a>
         </div>
       </main>

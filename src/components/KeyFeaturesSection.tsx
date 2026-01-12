@@ -4,43 +4,43 @@ export default function KeyFeaturesSection() {
   const features = [
     {
       icon: MessageCircle,
-      title: "WhatsApp Integration",
-      description: "Get AI-powered medical consultations directly through WhatsApp. No app downloads needed - just message your symptoms and get instant, accurate diagnoses in Luganda, English, and other local languages.",
+      title: "Free Medical Advice on WhatsApp",
+      description: "Get instant answers to your health questions through WhatsApp. No app download, no waiting rooms. Just message us your symptoms and get reliable medical guidance immediately.",
       color: "text-green-600",
       bgColor: "bg-green-50"
     },
     {
       icon: Smartphone,
-      title: "Universal Accessibility",
-      description: "Designed for every Ugandan, regardless of location, device, or connectivity. Works on basic phones, feature phones, and smartphones with offline capabilities for rural areas.",
+      title: "One Health ID for Life",
+      description: "Never lose your medical records again. Your Universal Health ID keeps everything in one place - test results, prescriptions, doctor visits - accessible from any hospital or clinic.",
       color: "text-blue-600",
       bgColor: "bg-blue-50"
     },
     {
       icon: Users,
-      title: "Multilingual Support",
-      description: "Full support for Uganda's languages: Luganda, Runyankole, Acholi, Swahili, and English. AI understands and responds in your preferred language for better healthcare access.",
+      title: "Book Doctors & Get Medicine",
+      description: "Book appointments with verified doctors, get prescriptions delivered to your door, and order lab tests - all from your phone. Healthcare made simple.",
       color: "text-purple-600",
       bgColor: "bg-purple-50"
     },
     {
       icon: Shield,
-      title: "Privacy-First Design",
-      description: "Your health data belongs to you. Full control over who accesses your information, with bank-grade encryption and compliance with Ugandan data protection laws.",
+      title: "Your Data, Your Control",
+      description: "You decide who sees your medical information. Bank-level security keeps your health data safe. No one can access it without your permission.",
       color: "text-teal-600",
       bgColor: "bg-teal-50"
     },
     {
       icon: Zap,
-      title: "Instant AI Diagnostics",
-      description: "Get accurate medical assessments in seconds, not days. AI trained on Ugandan health patterns provides reliable diagnoses and treatment recommendations.",
+      title: "Save Time & Money",
+      description: "No more repeat tests when you change hospitals. No more lost prescriptions. Your complete medical history travels with you, saving you time and money.",
       color: "text-orange-600",
       bgColor: "bg-orange-50"
     },
     {
       icon: Globe,
-      title: "Nationwide Coverage",
-      description: "Connected to 1000+ healthcare providers across Uganda. Seamless referrals, telemedicine, and emergency response coordination nationwide.",
+      title: "Works Anywhere in Uganda",
+      description: "From Kampala to the villages. Whether you're at Mulago Hospital or a rural health center, your health records are always available.",
       color: "text-red-600",
       bgColor: "bg-red-50"
     }
@@ -54,11 +54,10 @@ export default function KeyFeaturesSection() {
             OUR KILLER FEATURES
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Healthcare That Works for Every Ugandan
+            Healthcare That Works For You
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mediloop's breakthrough features make quality healthcare accessible to all Ugandans,
-            regardless of location, device, or language barriers.
+            Simple, fast, and secure. Get the care you need, when you need it, from anywhere in Uganda.
           </p>
         </div>
 
@@ -81,20 +80,20 @@ export default function KeyFeaturesSection() {
           ))}
         </div>
 
-        {/* WhatsApp Demo Preview */}
+        {/* WhatsApp Demo */}
         <div className="mt-16 bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-8">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Try It Now: WhatsApp Consultation
+                Try It Now on WhatsApp
               </h3>
               <p className="text-gray-700 mb-6">
-                Experience Mediloop's AI diagnostics through WhatsApp. Message your symptoms
-                and get instant medical guidance in your preferred language.
+                Send us a message on WhatsApp with your health question. Get instant, 
+                reliable medical advice - completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/256700000000?text=Hello%20Mediloop"
+                  href="https://wa.me/256775035244?text=Hello%20Mediloop"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium"

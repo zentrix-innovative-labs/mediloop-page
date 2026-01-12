@@ -31,21 +31,22 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Main navigation links for Mediloop's core pages */}
+            <a href="/about" className="text-gray-700 hover:text-gray-900 font-medium">About Us</a>
             <a href="/platform" className="text-gray-700 hover:text-gray-900 font-medium">Platform</a>
             <a href="/uhid" className="text-gray-700 hover:text-gray-900 font-medium">Universal Health ID</a>
             <a href="/providers" className="text-gray-700 hover:text-gray-900 font-medium">Provider Network</a>
-            <a href="/data-control" className="text-gray-700 hover:text-gray-900 font-medium">Citizen Data Control</a>
             <a href="/services" className="text-gray-700 hover:text-gray-900 font-medium">Digital Services</a>
 
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
-                About Us <ChevronDown className="ml-1 h-4 w-4" />
+                More <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <a href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Blog</a>
-                <a href="/klas" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">KLAS</a>
-                <a href="/newsletter" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Newsletter</a>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <a href="https://developers.mediloop.co" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Developer Portal</a>
+                <a href="https://docs.mediloop.co" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">API Documentation</a>
+                <div className="border-t border-gray-200"></div>
                 <a href="/team" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Team</a>
+                <a href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Blog</a>
                 <a href="/careers" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Careers</a>
                 <a href="/press" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Press</a>
                 <a href="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-50">Contact</a>
@@ -55,9 +56,11 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden lg:inline-flex text-gray-700 hover:text-gray-900">
-              Sign in
-            </Button>
+            <a href="https://app.mediloop.co" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" className="hidden lg:inline-flex text-gray-700 hover:text-gray-900">
+                Sign in
+              </Button>
+            </a>
             <button
               className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -75,24 +78,26 @@ export default function Header() {
         {mounted && isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="space-y-2">
+              <a href="/about" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">About Us</a>
               <a href="/platform" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Platform</a>
               <a href="/uhid" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Universal Health ID</a>
               <a href="/providers" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Provider Network</a>
-              <a href="/data-control" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Citizen Data Control</a>
               <a href="/services" className="block py-2 text-gray-700 hover:text-gray-900 font-medium">Digital Services</a>
               
               <div className="border-t border-gray-200 pt-2 mt-2">
-                <p className="text-sm font-medium text-gray-500 mb-2">About Us</p>
-                <a href="/blog" className="block py-1 text-gray-700 hover:text-gray-900">Blog</a>
-                <a href="/klas" className="block py-1 text-gray-700 hover:text-gray-900">KLAS</a>
-                <a href="/newsletter" className="block py-1 text-gray-700 hover:text-gray-900">Newsletter</a>
+                <p className="text-sm font-medium text-gray-500 mb-2">More</p>
+                <a href="https://developers.mediloop.co" target="_blank" rel="noopener noreferrer" className="block py-1 text-gray-700 hover:text-gray-900">Developer Portal</a>
+                <a href="https://docs.mediloop.co" target="_blank" rel="noopener noreferrer" className="block py-1 text-gray-700 hover:text-gray-900">API Documentation</a>
                 <a href="/team" className="block py-1 text-gray-700 hover:text-gray-900">Team</a>
+                <a href="/blog" className="block py-1 text-gray-700 hover:text-gray-900">Blog</a>
                 <a href="/careers" className="block py-1 text-gray-700 hover:text-gray-900">Careers</a>
                 <a href="/press" className="block py-1 text-gray-700 hover:text-gray-900">Press</a>
                 <a href="/contact" className="block py-1 text-gray-700 hover:text-gray-900">Contact</a>
               </div>
               
-              <Button variant="ghost" className="mt-4 w-full justify-start">Sign in</Button>
+              <a href="https://app.mediloop.co" target="_blank" rel="noopener noreferrer" className="block mt-4">
+                <Button variant="ghost" className="w-full justify-start">Sign in</Button>
+              </a>
             </div>
           </div>
         )}
