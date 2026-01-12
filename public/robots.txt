@@ -48,7 +48,13 @@ Allow: /*.ico$
 Allow: /*.webp$
 
 # Sitemap location
+# Primary sitemap index (preferred)
+Sitemap: https://mediloop.co/sitemap-index.xml
+# Individual sitemaps (fall back)
 Sitemap: https://mediloop.co/sitemap.xml
+Sitemap: https://mediloop.co/sitemap-pages.xml
+Sitemap: https://mediloop.co/sitemap-services.xml
+Sitemap: https://mediloop.co/sitemap-blog.xml
 
 # Crawl delay (optional - helps with server load)
 Crawl-delay: 1
