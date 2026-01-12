@@ -106,13 +106,3 @@ export default function RoadmapSection() {
     </section>
   )
 }
-
-        <div className="text-center mt-12">
-          <button className="text-teal-600 hover:text-teal-700 font-medium">
-            Contact us →
-          </button>
-        </div>
-      </div>
-    </section>
-  )
-}
