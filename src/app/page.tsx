@@ -14,13 +14,29 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <AnnouncementBanner />
+
+      {/* Hero Section - Primary Value Proposition */}
       <HeroSection />
+
+      {/* Social Proof & Trust Signals */}
       <PartnersSection />
+
+      {/* Core Features & Benefits */}
       <KeyFeaturesSection />
+
+      {/* Clinical Documentation & Medical Records */}
       <ClinicalDocSection />
+
+      {/* Developer & Integration Section */}
       <DevelopersSection />
+
+      {/* Security & Privacy Assurance */}
       <SecuritySection />
+
+      {/* User Testimonials & Reviews */}
       <TestimonialsSection />
+
+      {/* Footer with Links & Contact */}
       <Footer />
     </main>
   )
