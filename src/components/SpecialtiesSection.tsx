@@ -26,7 +26,7 @@ export default function SpecialtiesSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
-              <Activity className="w-4 h-4 text-teal-600" />
+              <Linkctivity className="w-4 h-4 text-teal-600" />
               <p className="text-teal-600 font-bold uppercase tracking-wide text-sm">
                 Comprehensive Medical Coverage
               </p>

@@ -1,53 +1,213 @@
-# Mediloop: Africa's National Digital Health Infrastructure
+# Mediloop Landing Page
 
-## 🌍 Universal Health for All: Citizens, Providers, Governments
+## 🏥 Standardizing Healthcare in Uganda
 
-Mediloop is Africa's first national-scale digital health infrastructure platform. We provide every citizen with a secure **Universal Health ID (UHID)**, connect all healthcare providers (public and private), and deliver instant, AI-powered diagnostics and triage via WhatsApp and other channels. Mediloop empowers governments, healthcare providers, and patients to access, manage, and improve healthcare for everyone, everywhere.
+Mediloop's official landing page showcasing Uganda's national healthcare infrastructure platform - FHIR-compliant, AI-powered, and WhatsApp-first.
 
-**From Uganda to the continent, Mediloop is building the digital backbone for accessible, affordable, and intelligent healthcare.**
+**Last Updated**: January 12, 2026
 
-### 🎯 Mission Statement
-*"To enable universal, equitable healthcare access by providing every citizen with a digital health identity, connecting all providers, and delivering AI-powered health services at national scale."*
+---
 
-### 📊 Impact at a Glance
-- **UHID for Every Citizen**: Secure, portable health identity for all
-- **Nationwide Provider Network**: All clinics, hospitals, pharmacies, labs, and more
-- **AI Diagnostics for All**: Instant, accurate results via WhatsApp and mobile
-- **Government-Grade Analytics**: Real-time health data for policy and planning
-- **Multi-Language, Multi-Channel**: English, Swahili, Luganda, and more
+## 🎯 Overview
 
-## 🚀 Key Features
+This Next.js landing page presents Mediloop as:
+- **National Healthcare Infrastructure**: FHIR R4-compliant platform for Uganda
+- **Universal Health ID (UHID)**: One record for every Ugandan's lifetime
+- **AI-Powered Diagnostics**: II-Medical-8B model with 87.82% MedQA accuracy
+- **WhatsApp-First**: Accessible healthcare without app downloads
+- **23 Microservices**: Complete healthcare ecosystem
 
-## � What Mediloop Delivers
+---
 
-### For Citizens & Patients
-- **Universal Health ID (UHID):** Your lifelong, secure health identity
-- **AI Diagnostics via WhatsApp:** Snap a photo, describe symptoms, get instant results
-- **Access to All Providers:** Book appointments, get prescriptions, and more
-- **Multi-language, Mobile-First:** Works on any phone, no app required
+## 📊 Key Sections
 
-### For Healthcare Providers
-- **Connect to National Health Network:** Serve patients with verified UHIDs
-- **Unified Patient Records:** Secure, consent-based access to health data
-- **AI Tools:** Diagnostics, triage, and analytics to improve care
-- **Compliance & Reporting:** Meet all regulatory requirements
+### 1. Hero Section
+- Vision: Standardizing Healthcare in Uganda
+- FHIR R4 compliance
+- II-Medical-8B AI with 87.82% accuracy
+- UHID system
+- 23 microservices architecture
 
-### For Governments & Public Health
-- **Population Health Analytics:** Real-time, anonymized data for planning
-- **National Registry:** Track coverage, outcomes, and provider performance
-- **Interoperability:** Integrate with existing health systems and ID registries
-- **Policy Tools:** Consent management, privacy, and compliance controls
+### 2. Key Features
+- WhatsApp-First AI (II-Medical-8B)
+- FHIR R4 Interoperability (HAPI FHIR)
+- Universal Health ID (UHID)
+- Enterprise Security (OAuth2/OIDC via Keycloak)
+- RAG-Powered Insights (Qwen embeddings + Qdrant)
+- 23 Microservices ecosystem
 
-## 💼 Business Model & Market Strategy
+### 3. AI Capabilities
+- **II-Medical-8B Model**: 87.82% MedQA accuracy, 40% HealthBench
+- **RAG with Qdrant**: 1024-dimension vectors, Qwen3-Embedding-0.6B
+- **vLLM Inference**: 2-5 tokens/second on g4dn.2xlarge GPU
+- **Clinical Decision Support**: Differential diagnoses with confidence scores
+- **Patient Timeline**: 6-month history priority with real-time FHIR sync
+- **Blue-Green Deployment**: Zero downtime at ai.mediloop.co
 
-## 💼 Who We Serve & How We Grow
+### 4. Technology Stack
+- HAPI FHIR R4 (FHIR Server)
+- Keycloak (OAuth2/OIDC Auth)
+- WhatsApp Business API
+- Kong API Gateway
+- PostgreSQL, Redis, Qdrant
+- Terminology Service
+- vLLM (AI Inference)
+- MTN & Airtel Mobile Money
 
-### User Segments
-- **Governments:** National health ministries, regulators, and public health agencies
-- **Healthcare Providers:** Hospitals, clinics, pharmacies, labs, and more
-- **Citizens & Patients:** Every individual, from urban to rural
+### 5. Service Architecture & Roadmap
+**Current Production Services:**
+- Auth Service (Keycloak) ✅
+- AI Service (II-Medical-8B) ✅
+- WhatsApp Service ✅
+- FHIR Server (HAPI FHIR) ✅
+- API Gateway (Kong) ✅
+- UHID Service ⚠️ 35%
+- Provider Service ⚠️ 35%
 
-### Value Proposition
+**Roadmap:**
+- Phase 1C: FHIR Enhancement (Q1 2026)
+- Phase 2: Healthcare Services (Q1-Q2 2026)
+- Phase 3: National Scale (Q2+ 2026)
+
+### 6. Clinical Documentation
+- FHIR Resources (Patient, Encounter, Observation, etc.)
+- AI-assisted documentation
+- SOAP notes generation
+- ICD-10 coding
+- Terminology standards (SNOMED CT, LOINC, RxNorm)
+
+### 7. Security & Compliance
+- FHIR R4 compliant
+- OAuth2/OIDC via Keycloak
+- End-to-end encryption
+- SOC 2 Type 2 compliant
+- Ugandan Data Protection Act compliant
+- 99.9% uptime SLA
+
+---
+
+## 🚫 Removed Features
+
+### Multilingual Support Claims
+**Removed**: All references to multiple language support (Luganda, Runyankole, Acholi, Swahili)
+**Reason**: Platform currently supports English only
+
+**Files with language references (unused):**
+- `TemplatesSection.tsx` (not imported in main page)
+
+### Removed Sections
+- TemplatesSection (language templates)
+- SpecialtiesSection
+- SettingsSection
+- ExpertiseSection
+- LeadersSection
+- PressSection
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Language**: TypeScript
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx                    # Main landing page
+│   ├── layout.tsx                  # Root layout
+│   └── globals.css                 # Global styles
+├── components/
+│   ├── Header.tsx                  # Navigation header
+│   ├── AnnouncementBanner.tsx      # Top banner
+│   ├── HeroSection.tsx             # Hero with value prop
+│   ├── PartnersSection.tsx         # Partner logos
+│   ├── KeyFeaturesSection.tsx      # Core features
+│   ├── AICapabilitiesSection.tsx   # AI technical details (NEW)
+│   ├── IntegrationsSection.tsx     # Tech stack
+│   ├── RoadmapSection.tsx          # Service architecture
+│   ├── ClinicalDocSection.tsx      # FHIR documentation
+│   ├── SecuritySection.tsx         # Security & compliance
+│   ├── TestimonialsSection.tsx     # Social proof
+│   └── Footer.tsx                  # Footer links
+└── lib/
+    └── utils.ts                    # Utility functions
+```
+
+---
+
+## 🚀 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+---
+
+## ✅ What Changed (January 12, 2026)
+
+### Updated Content
+1. **Hero Section**: Emphasizes standardization, FHIR compliance, II-Medical-8B AI
+2. **Key Features**: Replaced generic features with technical capabilities
+3. **NEW: AI Capabilities Section**: Comprehensive AI platform overview
+4. **Roadmap**: Shows actual microservices and production status
+5. **Integrations**: Lists real technology stack (HAPI FHIR, Keycloak, etc.)
+6. **Clinical Documentation**: FHIR resources and AI documentation features
+7. **Security**: Enterprise-grade infrastructure and compliance
+
+### Removed
+- All multilingual/multi-language references
+- Language template section
+- Generic/placeholder sections
+- Outdated roadmap items
+
+### Accuracy Improvements
+- AI model: II-Medical-8B (not MedGemma)
+- Accuracy: 87.82% MedQA, 40% HealthBench
+- Infrastructure: AWS g4dn.2xlarge, NVIDIA T4
+- Services: 23 microservices (specific names and status)
+- FHIR utilization: Currently 35%, targeting 90%+
+
+---
+
+## 📝 Future Enhancements
+
+- [ ] Add real partner logos
+- [ ] Include actual testimonials from healthcare providers
+- [ ] Add video demo of WhatsApp AI consultation
+- [ ] Provider portal screenshots
+- [ ] Patient portal screenshots
+- [ ] Architecture diagrams
+- [ ] API documentation links
+
+---
+
+## 📞 Contact
+
+- Website: [mediloop.co](https://mediloop.co)
+- Email: info@mediloop.co
+- API: [api.mediloop.co](https://api.mediloop.co)
+- AI Service: [ai.mediloop.co](https://ai.mediloop.co)
+
+---
+
+**Built with ❤️ for Uganda's Healthcare Transformation**
 - **For Governments:** National health coverage, analytics, and compliance
 - **For Providers:** Seamless patient onboarding, AI tools, and unified records
 - **For Patients:** Instant access, privacy, and better health outcomes

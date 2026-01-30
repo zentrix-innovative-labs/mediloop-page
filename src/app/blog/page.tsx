@@ -47,16 +47,16 @@ export default function BlogPage() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {posts.map((post, index) => (
-            <article key={index} className="bg-white rounded-lg p-8 shadow-lg">
+            <Linkrticle key={index} className="bg-white rounded-lg p-8 shadow-lg">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">{post.title}</h2>
               <p className="text-gray-700 mb-6">{post.excerpt}</p>
               <div className="flex justify-between items-center text-sm text-gray-500">
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
-              <a href="#" className="text-teal-600 hover:text-teal-700 font-semibold mt-4 inline-block">
+              <Link href="#" className="text-teal-600 hover:text-teal-700 font-semibold mt-4 inline-block">
                 Read more →
-              </a>
+              </Link>
             </article>
           ))}
         </div>

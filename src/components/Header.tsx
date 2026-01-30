@@ -36,6 +36,12 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Main navigation links for Mediloop's core pages */}
             <Link
+              href="/about"
+              className="text-gray-700 hover:text-gray-900 font-medium"
+            >
+              About Us
+            </Link>
+            <Link
               href="/platform"
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
@@ -54,12 +60,6 @@ export default function Header() {
               Provider Network
             </Link>
             <Link
-              href="/data-control"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Citizen Data Control
-            </Link>
-            <Link
               href="/services"
               className="text-gray-700 hover:text-gray-900 font-medium"
             >
@@ -68,32 +68,37 @@ export default function Header() {
 
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
-                About Us <ChevronDown className="ml-1 h-4 w-4" />
+                More <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                 <Link
-                  href="/blog"
+                  href="https://developers.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
                 >
-                  Blog
+                  Developer Portal
                 </Link>
                 <Link
-                  href="/klas"
+                  href="https://docs.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
                 >
-                  KLAS
+                  API Documentation
                 </Link>
-                <Link
-                  href="/newsletter"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Newsletter
-                </Link>
+                <div className="border-t border-gray-200"></div>
                 <Link
                   href="/team"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
                 >
                   Team
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                >
+                  Blog
                 </Link>
                 <Link
                   href="/careers"
@@ -119,12 +124,18 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              className="hidden lg:inline-flex text-gray-700 hover:text-gray-900"
+            <Link
+              href="https://app.mediloop.co"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Sign in
-            </Button>
+              <Button
+                variant="ghost"
+                className="hidden lg:inline-flex text-gray-700 hover:text-gray-900"
+              >
+                Sign in
+              </Button>
+            </Link>
             <button
               className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -153,6 +164,12 @@ export default function Header() {
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="space-y-2">
               <Link
+                href="/about"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+              >
+                About Us
+              </Link>
+              <Link
                 href="/platform"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
               >
@@ -171,12 +188,6 @@ export default function Header() {
                 Provider Network
               </Link>
               <Link
-                href="/data-control"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                Citizen Data Control
-              </Link>
-              <Link
                 href="/services"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
               >
@@ -184,32 +195,34 @@ export default function Header() {
               </Link>
 
               <div className="border-t border-gray-200 pt-2 mt-2">
-                <p className="text-sm font-medium text-gray-500 mb-2">
-                  About Us
-                </p>
+                <p className="text-sm font-medium text-gray-500 mb-2">More</p>
                 <Link
-                  href="/blog"
+                  href="https://developers.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block py-1 text-gray-700 hover:text-gray-900"
                 >
-                  Blog
+                  Developer Portal
                 </Link>
                 <Link
-                  href="/klas"
+                  href="https://docs.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block py-1 text-gray-700 hover:text-gray-900"
                 >
-                  KLAS
-                </Link>
-                <Link
-                  href="/newsletter"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Newsletter
+                  API Documentation
                 </Link>
                 <Link
                   href="/team"
                   className="block py-1 text-gray-700 hover:text-gray-900"
                 >
                   Team
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block py-1 text-gray-700 hover:text-gray-900"
+                >
+                  Blog
                 </Link>
                 <Link
                   href="/careers"
@@ -231,9 +244,16 @@ export default function Header() {
                 </Link>
               </div>
 
-              <Button variant="ghost" className="mt-4 w-full justify-start">
-                Sign in
-              </Button>
+              <Link
+                href="https://app.mediloop.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-4"
+              >
+                <Button variant="ghost" className="w-full justify-start">
+                  Sign in
+                </Button>
+              </Link>
             </div>
           </div>
         )}

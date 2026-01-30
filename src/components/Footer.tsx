@@ -24,7 +24,7 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Mediloop */}
           <div className="flex items-start">
             <Link href="/" className="flex items-center mr-4">
@@ -38,65 +38,42 @@ export default function Footer() {
               <div className="space-y-2 text-gray-400">
                 <div>Digitalising healthcare for Uganda</div>
                 <div>Universal access • Citizen data control</div>
-                <div>EN | SW | LG</div>
               </div>
             </div>
           </div>
 
-          {/* Products */}
+          {/* For Patients */}
           <div>
-            <h4 className="font-bold mb-4">Products</h4>
+            <h4 className="font-bold mb-4">For Patients</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/products" className="hover:text-white">
-                  All Products
+                <Link
+                  href="https://app.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Patient Portal
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-white">
-                  Web app
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-white">
-                  iOS app
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-white">
-                  Android app
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-white">
-                  Chrome extension
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-white">
-                  API
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white">
-                  Contact us
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="font-bold mb-4">Support</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/support" className="hover:text-white">
-                  What's new
+                <Link
+                  href="https://wa.me/256775035244"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  WhatsApp Consultation
                 </Link>
               </li>
               <li>
                 <Link href="/support" className="hover:text-white">
-                  Help center
+                  Get Your Health ID
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="hover:text-white">
+                  Book Appointment
                 </Link>
               </li>
               <li>
@@ -104,14 +81,68 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* For Providers */}
+          <div>
+            <h4 className="font-bold mb-4">For Providers</h4>
+            <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/support" className="hover:text-white">
-                  Status page
+                <Link
+                  href="https://providers.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Provider Portal
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="hover:text-white">
-                  Security
+                <Link href="/providers" className="hover:text-white">
+                  Register Facility
+                </Link>
+              </li>
+              <li>
+                <Link href="/providers" className="hover:text-white">
+                  Integration Guide
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* For Developers */}
+          <div>
+            <h4 className="font-bold mb-4">For Developers</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link
+                  href="https://developers.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Developer Portal
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://docs.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  API Documentation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://developers.mediloop.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Build on Mediloop
                 </Link>
               </li>
             </ul>
@@ -122,6 +153,11 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
+                <Link href="/about" className="hover:text-white">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link href="/careers" className="hover:text-white">
                   Careers
                 </Link>
@@ -129,11 +165,6 @@ export default function Footer() {
               <li>
                 <Link href="/blog" className="hover:text-white">
                   Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="hover:text-white">
-                  Team
                 </Link>
               </li>
               <li>
@@ -148,38 +179,58 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-bold mb-4">Legal</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/privacy" className="hover:text-white">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-white">
+                  Terms & Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Contact Info */}
         <div className="grid md:grid-cols-2 gap-8 mt-12 pt-8 border-t border-gray-800">
           <div>
-            <h5 className="font-semibold mb-2">Africa HQ</h5>
+            <h5 className="font-semibold mb-2">Office Location</h5>
             <p className="text-gray-400 text-sm">
-              Plot 10, Yusuf Lule Road
+              Plot 19-21 PortBell Road
               <br />
-              Kampala, Uganda
+              Nakawa, Kampala
+              <br />
+              Uganda
             </p>
           </div>
           <div>
             <h5 className="font-semibold mb-2">Contact</h5>
             <p className="text-gray-400 text-sm">
-              info@mediloop.co
+              Email: info@mediloop.co
               <br />
+              WhatsApp:{" "}
               <Link
-                href="https://mediloop.co"
+                href="https://wa.me/256775035244"
                 className="hover:text-white underline"
               >
-                mediloop.co
+                +256 775 035244
               </Link>
               <br />
-              +256 700 000000
+              Phone: +256 775 035244
             </p>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 pt-8 border-t border-gray-800">
-          <p className="text-gray-400 text-sm">Mediloop Health • 2025</p>
+          <p className="text-gray-400 text-sm">Mediloop Health • 2026</p>
           <p className="text-gray-400 text-sm">info@mediloop.co</p>
         </div>
       </div>

@@ -4,37 +4,39 @@ import HeroSection from "@/components/HeroSection";
 import PartnersSection from "@/components/PartnersSection";
 import KeyFeaturesSection from "@/components/KeyFeaturesSection";
 import ClinicalDocSection from "@/components/ClinicalDocSection";
-import IntegrationsSection from "@/components/IntegrationsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import SpecialtiesSection from "@/components/SpecialtiesSection";
-import TemplatesSection from "@/components/TemplatesSection";
-import RoadmapSection from "@/components/RoadmapSection";
-import SettingsSection from "@/components/SettingsSection";
-import ExpertiseSection from "@/components/ExpertiseSection";
-import LeadersSection from "@/components/LeadersSection";
+import DevelopersSection from "@/components/DevelopersSection";
 import SecuritySection from "@/components/SecuritySection";
-import PressSection from "@/components/PressSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <AnnouncementBanner />
+      {/* <LinknnouncementBanner /> */}
+
+      {/* Hero Section - Primary Value Proposition */}
       <HeroSection />
+
+      {/* Social Proof & Trust Signals */}
       <PartnersSection />
+
+      {/* Core Features & Benefits */}
       <KeyFeaturesSection />
+
+      {/* Clinical Documentation & Medical Records */}
       <ClinicalDocSection />
-      <IntegrationsSection />
-      <TestimonialsSection />
-      <SpecialtiesSection />
-      <TemplatesSection />
-      <RoadmapSection />
-      <SettingsSection />
-      <ExpertiseSection />
-      <LeadersSection />
+
+      {/* Developer & Integration Section */}
+      <DevelopersSection />
+
+      {/* Security & Privacy Assurance */}
       <SecuritySection />
-      <PressSection />
+
+      {/* User Testimonials & Reviews */}
+      <TestimonialsSection />
+
+      {/* Footer with Links & Contact */}
       <Footer />
     </main>
   );

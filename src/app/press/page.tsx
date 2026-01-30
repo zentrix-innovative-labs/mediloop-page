@@ -73,15 +73,15 @@ export default function PressPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Press Releases</h2>
             <div className="space-y-6">
               {pressReleases.map((release, index) => (
-                <article key={index} className="bg-white rounded-lg p-6 shadow-lg">
+                <Linkrticle key={index} className="bg-white rounded-lg p-6 shadow-lg">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{release.title}</h3>
                     <span className="text-sm text-gray-500">{release.date}</span>
                   </div>
                   <p className="text-gray-700 mb-4">{release.excerpt}</p>
-                  <a href={release.link} className="text-teal-600 hover:text-teal-700 font-semibold">
+                  <Link href={release.link} className="text-teal-600 hover:text-teal-700 font-semibold">
                     Read full release →
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -91,15 +91,15 @@ export default function PressPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Media Coverage</h2>
             <div className="space-y-6">
               {mediaCoverage.map((coverage, index) => (
-                <article key={index} className="bg-white rounded-lg p-6 shadow-lg">
+                <Linkrticle key={index} className="bg-white rounded-lg p-6 shadow-lg">
                   <div className="flex items-center mb-3">
                     <span className="font-semibold text-teal-600 mr-3">{coverage.outlet}</span>
                     <span className="text-sm text-gray-500">{coverage.date}</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{coverage.title}</h3>
-                  <a href="#" className="text-teal-600 hover:text-teal-700 font-semibold">
+                  <Link href="#" className="text-teal-600 hover:text-teal-700 font-semibold">
                     Read article →
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -145,9 +145,9 @@ export default function PressPage() {
         <div className="bg-gradient-to-r from-teal-600 to-green-600 rounded-2xl p-12 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Press Inquiries</h2>
           <p className="text-xl mb-8">For press inquiries, interviews, or media requests.</p>
-          <a href="mailto:press@mediloop.co" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+          <Link href="mailto:press@mediloop.co" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
             press@mediloop.co
-          </a>
+          </Link>
         </div>
       </main>
       <Footer />
