@@ -5,6 +5,38 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
+const mainNavLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Platform", href: "/platform" },
+  { label: "Universal Health ID", href: "/uhid" },
+  { label: "Provider Network", href: "/providers" },
+  { label: "Digital Services", href: "/services" },
+];
+
+const moreNavLinks = [
+  {
+    label: "Developer Portal",
+    href: "https://developers.mediloop.co",
+    external: true,
+  },
+  {
+    label: "API Documentation",
+    href: "https://docs.mediloop.co",
+    external: true,
+  },
+  { label: "Team", href: "/team" },
+  { label: "Blog", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Press", href: "/press" },
+  { label: "Contact", href: "/contact" },
+];
+
+const navCTA = {
+  label: "Sign in",
+  href: "https://app.mediloop.co",
+  external: true,
+};
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -35,89 +67,32 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Main navigation links for Mediloop's core pages */}
-            <Link
-              href="/about"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/platform"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Platform
-            </Link>
-            <Link
-              href="/uhid"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Universal Health ID
-            </Link>
-            <Link
-              href="/providers"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Provider Network
-            </Link>
-            <Link
-              href="/services"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Digital Services
-            </Link>
+            {mainNavLinks.map((link, idx) => (
+              <Link
+                key={idx}
+                href={link.href}
+                className="text-gray-700 hover:text-gray-900 font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
 
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-gray-900 font-medium">
                 More <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <Link
-                  href="https://developers.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Developer Portal
-                </Link>
-                <Link
-                  href="https://docs.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  API Documentation
-                </Link>
-                <div className="border-t border-gray-200"></div>
-                <Link
-                  href="/team"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Team
-                </Link>
-                <Link
-                  href="/blog"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/careers"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Careers
-                </Link>
-                <Link
-                  href="/press"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Press
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                >
-                  Contact
-                </Link>
+                {moreNavLinks.map((link, idx) => (
+                  <Link
+                    key={idx}
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </nav>
@@ -163,97 +138,43 @@ export default function Header() {
         {mounted && isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="space-y-2">
-              <Link
-                href="/about"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/platform"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                Platform
-              </Link>
-              <Link
-                href="/uhid"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                Universal Health ID
-              </Link>
-              <Link
-                href="/providers"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                Provider Network
-              </Link>
-              <Link
-                href="/services"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
-              >
-                Digital Services
-              </Link>
+              {mainNavLinks.map((navLink, idx) => (
+                <Link
+                  key={idx}
+                  href={navLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-2 text-gray-700 hover:text-gray-900 font-medium"
+                >
+                  {navLink.label}
+                </Link>
+              ))}
 
               <div className="border-t border-gray-200 pt-2 mt-2">
                 <p className="text-sm font-medium text-gray-500 mb-2">More</p>
-                <Link
-                  href="https://developers.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Developer Portal
-                </Link>
-                <Link
-                  href="https://docs.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  API Documentation
-                </Link>
-                <Link
-                  href="/team"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Team
-                </Link>
-                <Link
-                  href="/blog"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/careers"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Careers
-                </Link>
-                <Link
-                  href="/press"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Press
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block py-1 text-gray-700 hover:text-gray-900"
-                >
-                  Contact
-                </Link>
+                {moreNavLinks.map((link, idx) => (
+                  <Link
+                    key={idx}
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    className="block py-1 text-gray-700 hover:text-gray-900"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
 
-              <Link
-                href="https://app.mediloop.co"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-4"
-              >
-                <Button variant="ghost" className="w-full justify-start">
-                  Sign in
-                </Button>
-              </Link>
+              <Button variant="ghost" className="w-full justify-start">
+                <Link
+                  href={navCTA.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-4"
+                >
+                  {navCTA.label}
+                </Link>
+              </Button>
             </div>
           </div>
         )}

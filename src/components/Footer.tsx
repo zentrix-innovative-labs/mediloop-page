@@ -1,5 +1,91 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+const footerSections = [
+  {
+    title: "For Patients",
+    links: [
+      {
+        label: "Patient Portal",
+        href: "https://app.mediloop.co",
+        external: true,
+      },
+      {
+        label: "WhatsApp Consultation",
+        href: "https://wa.me/256775035244",
+        external: true,
+      },
+      {
+        label: "Get Your Health ID",
+        href: "/support",
+      },
+      {
+        label: "Book Appointment",
+        href: "/support",
+      },
+      {
+        label: "FAQ",
+        href: "/support",
+      },
+    ],
+  },
+  {
+    title: "For Providers",
+    links: [
+      {
+        label: "Provider Portal",
+        href: "https://providers.mediloop.co",
+        external: true,
+      },
+      {
+        label: "Register Facility",
+        href: "/providers",
+      },
+      {
+        label: "Integration Guide",
+        href: "/providers",
+      },
+    ],
+  },
+  {
+    title: "For Developers",
+    links: [
+      {
+        label: "Developer Portal",
+        href: "https://developers.mediloop.co",
+        external: true,
+      },
+      {
+        label: "API Documentation",
+        href: "https://docs.mediloop.co",
+        external: true,
+      },
+      {
+        label: "Build on Mediloop",
+        href: "https://developers.mediloop.co",
+        external: true,
+      },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Blog", href: "/blog" },
+      { label: "Press", href: "/press" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms & Conditions", href: "/terms" },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
@@ -28,9 +114,11 @@ export default function Footer() {
           {/* Mediloop */}
           <div className="flex items-start">
             <Link href="/" className="flex items-center mr-4">
-              <img
+              <Image
                 src="/assets/mediloop.png"
                 alt="Mediloop logo"
+                height={240}
+                width={320}
                 className="h-32 w-auto sm:h-32"
               />
             </Link>
@@ -42,160 +130,25 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* For Patients */}
-          <div>
-            <h4 className="font-bold mb-4">For Patients</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link
-                  href="https://app.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Patient Portal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://wa.me/256775035244"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  WhatsApp Consultation
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="hover:text-white">
-                  Get Your Health ID
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="hover:text-white">
-                  Book Appointment
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="hover:text-white">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* For Providers */}
-          <div>
-            <h4 className="font-bold mb-4">For Providers</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link
-                  href="https://providers.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Provider Portal
-                </Link>
-              </li>
-              <li>
-                <Link href="/providers" className="hover:text-white">
-                  Register Facility
-                </Link>
-              </li>
-              <li>
-                <Link href="/providers" className="hover:text-white">
-                  Integration Guide
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* For Developers */}
-          <div>
-            <h4 className="font-bold mb-4">For Developers</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link
-                  href="https://developers.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Developer Portal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://docs.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  API Documentation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://developers.mediloop.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Build on Mediloop
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-bold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/about" className="hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="hover:text-white">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-white">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/press" className="hover:text-white">
-                  Press
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-bold mb-4">Legal</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/privacy" className="hover:text-white">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-white">
-                  Terms & Conditions
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {footerSections.map((footer, idx) => (
+            <div key={idx}>
+              <h4 className="font-bold mb-4">{footer.title}</h4>
+              {footer.links.map((link, idx) => (
+                <ul key={idx} className="space-y-2 text-gray-400">
+                  <li>
+                    <Link
+                      href={link.href}
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noopener noreferrer" : undefined}
+                      className="hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                </ul>
+              ))}
+            </div>
+          ))}
         </div>
 
         {/* Contact Info */}

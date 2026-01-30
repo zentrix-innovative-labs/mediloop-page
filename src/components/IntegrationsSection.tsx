@@ -14,8 +14,8 @@ export default function IntegrationsSection() {
     { name: "MTN Mobile Money", description: "Payments" },
     { name: "Airtel Money", description: "Payments" },
     { name: "NIRA (NIN)", description: "Identity Verification" },
-    { name: "vLLM", description: "AI Inference" }
-  ]
+    { name: "vLLM", description: "AI Inference" },
+  ];
 
   return (
     <section className="bg-white py-16">
@@ -28,23 +28,23 @@ export default function IntegrationsSection() {
             Enterprise Infrastructure & Integrations
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Production-grade stack powering Uganda's healthcare platform with 99.9% uptime
+            Production-grade stack powering Uganda's healthcare platform with
+            99.9% uptime
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="text-center mt-8">
-          <Link
-            href="https://mediloop.co/integrations"
-=======
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
           {integrations.map((integration, index) => (
             <div
               key={index}
               className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-teal-500 hover:shadow-md transition-all text-center"
             >
-              <div className="font-bold text-gray-900 mb-1">{integration.name}</div>
-              <div className="text-sm text-gray-600">{integration.description}</div>
+              <div className="font-bold text-gray-900 mb-1">
+                {integration.name}
+              </div>
+              <div className="text-sm text-gray-600">
+                {integration.description}
+              </div>
             </div>
           ))}
         </div>
@@ -52,13 +52,12 @@ export default function IntegrationsSection() {
         <div className="text-center">
           <Link
             href="https://mediloop.co/developers"
->>>>>>> 87ffbd023ec3e1adb3549aec51eab25621d6b733
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
             target="_blank"
             rel="noopener noreferrer"
           >
             View API Documentation
-            <LinkrrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
       </div>

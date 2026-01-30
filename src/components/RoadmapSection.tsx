@@ -30,6 +30,48 @@ export default function RoadmapSection() {
     },
   ];
 
+  const serviceRoadmap = [
+    {
+      title: "Core Services",
+      timeline: "Live",
+      items: [
+        "✅ Auth Service (Keycloak)",
+        "✅ AI Service (II-Medical-8B)",
+        "✅ WhatsApp Service",
+        "✅ FHIR Server (HAPI FHIR)",
+        "✅ API Gateway (Kong)",
+        "⚠️ UHID Service (35%)",
+        "⚠️ Provider Service (35%)",
+      ],
+    },
+    {
+      title: "Clinical Services",
+      timeline: "Q1 2026",
+      items: [
+        "🔄 Encounter Service",
+        "🔄 Care Coordination",
+        "🔄 Appointment Service",
+        "📅 Lab Service (LIS)",
+        "📅 Pharmacy Service",
+        "📅 Imaging Service",
+        "📅 Prescription Service",
+      ],
+    },
+    {
+      title: "Platform Services",
+      timeline: "Q2 2026",
+      items: [
+        "📅 Billing & Claims",
+        "📅 Consent Management",
+        "📅 Notification Service",
+        "📅 Analytics Platform",
+        "📅 Audit Trail",
+        "📅 Document Service",
+        "📅 Terminology Service",
+      ],
+    },
+  ];
+
   return (
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -70,48 +112,22 @@ export default function RoadmapSection() {
 
         {/* Service Categories */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">
-              Core Services (Live)
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>✅ Auth Service (Keycloak)</li>
-              <li>✅ AI Service (II-Medical-8B)</li>
-              <li>✅ WhatsApp Service</li>
-              <li>✅ FHIR Server (HAPI FHIR)</li>
-              <li>✅ API Gateway (Kong)</li>
-              <li>⚠️ UHID Service (35%)</li>
-              <li>⚠️ Provider Service (35%)</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">
-              Clinical Services (Q1 2026)
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>🔄 Encounter Service</li>
-              <li>🔄 Care Coordination</li>
-              <li>🔄 Appointment Service</li>
-              <li>📅 Lab Service (LIS)</li>
-              <li>📅 Pharmacy Service</li>
-              <li>📅 Imaging Service</li>
-              <li>📅 Prescription Service</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">
-              Platform Services (Q2 2026)
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>📅 Billing & Claims</li>
-              <li>📅 Consent Management</li>
-              <li>📅 Notification Service</li>
-              <li>📅 Analytics Platform</li>
-              <li>📅 Audit Trail</li>
-              <li>📅 Document Service</li>
-              <li>📅 Terminology Service</li>
-            </ul>
-          </div>
+          {serviceRoadmap.map((section, idx) => (
+            <div key={idx} className="bg-gray-50 rounded-xl p-6">
+              <h4 className="font-bold text-gray-900 mb-4">
+                {section.title}{" "}
+                <span className="text-gray-500 font-normal">
+                  ({section.timeline})
+                </span>
+              </h4>
+
+              <ul className="space-y-2 text-sm text-gray-600">
+                {section.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

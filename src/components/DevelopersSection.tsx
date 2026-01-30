@@ -1,6 +1,33 @@
 import { Code, Zap, Shield, Book } from "lucide-react";
 import Link from "next/link";
 
+const developerFeatures = [
+  {
+    title: "Complete APIs",
+    description:
+      "Patient records, appointments, prescriptions, lab results, and more. Everything you need in one place.",
+    icon: Code,
+  },
+  {
+    title: "Build Fast",
+    description:
+      "EMR vendors, clinic apps, telemedicine platforms – go from idea to production in weeks, not months.",
+    icon: Zap,
+  },
+  {
+    title: "Secure & Compliant",
+    description:
+      "We handle security, compliance, and data protection. Your apps are secure by default.",
+    icon: Shield,
+  },
+  {
+    title: "Full Documentation",
+    description:
+      "Comprehensive API docs, code examples, SDKs, and support to get you started quickly.",
+    icon: Book,
+  },
+];
+
 export default function DevelopersSection() {
   return (
     <section className="bg-gray-50 py-20">
@@ -20,55 +47,20 @@ export default function DevelopersSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Code className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Complete APIs
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Patient records, appointments, prescriptions, lab results, and
-              more. Everything you need in one place.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Build Fast</h3>
-            <p className="text-gray-600 text-sm">
-              EMR vendors, clinic apps, telemedicine platforms - go from idea to
-              production in weeks, not months.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Secure & Compliant
-            </h3>
-            <p className="text-gray-600 text-sm">
-              We handle security, compliance, and data protection. Your apps are
-              secure by default.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Book className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Full Documentation
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Comprehensive API docs, code examples, SDKs, and support to get
-              you started quickly.
-            </p>
-          </div>
+          {developerFeatures.map((item, idx) => {
+            const Icons = item.icon;
+            return (
+              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm">
+                <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
+                  <Icons className="w-6 h-6 text-teal-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl p-12 text-white text-center">
