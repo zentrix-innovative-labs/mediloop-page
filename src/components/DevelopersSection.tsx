@@ -1,4 +1,32 @@
-import { Code, Zap, Shield, Book } from 'lucide-react'
+import { Code, Zap, Shield, Book } from "lucide-react";
+import Link from "next/link";
+
+const developerFeatures = [
+  {
+    title: "Complete APIs",
+    description:
+      "Patient records, appointments, prescriptions, lab results, and more. Everything you need in one place.",
+    icon: Code,
+  },
+  {
+    title: "Build Fast",
+    description:
+      "EMR vendors, clinic apps, telemedicine platforms – go from idea to production in weeks, not months.",
+    icon: Zap,
+  },
+  {
+    title: "Secure & Compliant",
+    description:
+      "We handle security, compliance, and data protection. Your apps are secure by default.",
+    icon: Shield,
+  },
+  {
+    title: "Full Documentation",
+    description:
+      "Comprehensive API docs, code examples, SDKs, and support to get you started quickly.",
+    icon: Book,
+  },
+];
 
 export default function DevelopersSection() {
   return (
@@ -12,59 +40,27 @@ export default function DevelopersSection() {
             Build Healthcare Apps Without the Infrastructure Headache
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We handle all the complex infrastructure - authentication, patient records, FHIR compliance, 
-            security, and data management. You focus on building great medical applications.
+            We handle all the complex infrastructure - authentication, patient
+            records, FHIR compliance, security, and data management. You focus
+            on building great medical applications.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Code className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Complete APIs
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Patient records, appointments, prescriptions, lab results, and more. Everything you need in one place.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Build Fast
-            </h3>
-            <p className="text-gray-600 text-sm">
-              EMR vendors, clinic apps, telemedicine platforms - go from idea to production in weeks, not months.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Secure & Compliant
-            </h3>
-            <p className="text-gray-600 text-sm">
-              We handle security, compliance, and data protection. Your apps are secure by default.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-              <Book className="w-6 h-6 text-teal-600" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Full Documentation
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Comprehensive API docs, code examples, SDKs, and support to get you started quickly.
-            </p>
-          </div>
+          {developerFeatures.map((item, idx) => {
+            const Icons = item.icon;
+            return (
+              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm">
+                <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
+                  <Icons className="w-6 h-6 text-teal-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl p-12 text-white text-center">
@@ -72,29 +68,30 @@ export default function DevelopersSection() {
             Ready to Build on Mediloop?
           </h3>
           <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
-            Join the platform powering Uganda's healthcare transformation. Build EMR systems, 
-            clinic management apps, telemedicine platforms, and more.
+            Join the platform powering Uganda's healthcare transformation. Build
+            EMR systems, clinic management apps, telemedicine platforms, and
+            more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="https://developers.mediloop.co"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-teal-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium"
             >
               Developer Portal
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://docs.mediloop.co"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-3 rounded-lg font-medium"
             >
               API Documentation
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

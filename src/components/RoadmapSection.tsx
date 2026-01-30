@@ -2,29 +2,75 @@ export default function RoadmapSection() {
   const phases = [
     {
       title: "Current: Production Services",
-      description: "Auth Service (Keycloak), AI Service (II-Medical-8B), WhatsApp Service, FHIR Server (HAPI FHIR), API Gateway (Kong), UHID & Provider Services operational.",
+      description:
+        "Auth Service (Keycloak), AI Service (II-Medical-8B), WhatsApp Service, FHIR Server (HAPI FHIR), API Gateway (Kong), UHID & Provider Services operational.",
       icon: "✅",
-      status: "Live"
+      status: "Live",
     },
     {
       title: "Phase 1C: FHIR Enhancement",
-      description: "Complete FHIR-first reads (60% utilization), Encounter Service, full UHID-FHIR integration, Terminology Service expansion, Care Coordination complete.",
+      description:
+        "Complete FHIR-first reads (60% utilization), Encounter Service, full UHID-FHIR integration, Terminology Service expansion, Care Coordination complete.",
       icon: "🔄",
-      status: "In Progress"
+      status: "In Progress",
     },
     {
       title: "Phase 2: Healthcare Services",
-      description: "Pharmacy Service, Lab Service (LIS), Imaging Service, Billing & Claims, Mobile Money integration (MTN, Airtel), Patient & Provider portals launch.",
+      description:
+        "Pharmacy Service, Lab Service (LIS), Imaging Service, Billing & Claims, Mobile Money integration (MTN, Airtel), Patient & Provider portals launch.",
       icon: "🏥",
-      status: "Month 2"
+      status: "Month 2",
     },
     {
       title: "Phase 3: National Scale",
-      description: "MOH eMIS integration, Event-driven architecture (Kafka), Disaster recovery, Analytics platform, Developer ecosystem, 90%+ FHIR utilization.",
+      description:
+        "MOH eMIS integration, Event-driven architecture (Kafka), Disaster recovery, Analytics platform, Developer ecosystem, 90%+ FHIR utilization.",
       icon: "🚀",
-      status: "Month 3+"
-    }
-  ]
+      status: "Month 3+",
+    },
+  ];
+
+  const serviceRoadmap = [
+    {
+      title: "Core Services",
+      timeline: "Live",
+      items: [
+        "✅ Auth Service (Keycloak)",
+        "✅ AI Service (II-Medical-8B)",
+        "✅ WhatsApp Service",
+        "✅ FHIR Server (HAPI FHIR)",
+        "✅ API Gateway (Kong)",
+        "⚠️ UHID Service (35%)",
+        "⚠️ Provider Service (35%)",
+      ],
+    },
+    {
+      title: "Clinical Services",
+      timeline: "Q1 2026",
+      items: [
+        "🔄 Encounter Service",
+        "🔄 Care Coordination",
+        "🔄 Appointment Service",
+        "📅 Lab Service (LIS)",
+        "📅 Pharmacy Service",
+        "📅 Imaging Service",
+        "📅 Prescription Service",
+      ],
+    },
+    {
+      title: "Platform Services",
+      timeline: "Q2 2026",
+      items: [
+        "📅 Billing & Claims",
+        "📅 Consent Management",
+        "📅 Notification Service",
+        "📅 Analytics Platform",
+        "📅 Audit Trail",
+        "📅 Document Service",
+        "📅 Terminology Service",
+      ],
+    },
+  ];
 
   return (
     <section className="bg-white py-20">
@@ -37,7 +83,8 @@ export default function RoadmapSection() {
             23 Microservices. One Unified Platform.
           </h2>
           <p className="text-xl text-gray-600">
-            FHIR-first architecture with production services live and complete healthcare ecosystem launching in phases
+            FHIR-first architecture with production services live and complete
+            healthcare ecosystem launching in phases
           </p>
         </div>
 
@@ -65,44 +112,24 @@ export default function RoadmapSection() {
 
         {/* Service Categories */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">Core Services (Live)</h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>✅ Auth Service (Keycloak)</li>
-              <li>✅ AI Service (II-Medical-8B)</li>
-              <li>✅ WhatsApp Service</li>
-              <li>✅ FHIR Server (HAPI FHIR)</li>
-              <li>✅ API Gateway (Kong)</li>
-              <li>⚠️ UHID Service (35%)</li>
-              <li>⚠️ Provider Service (35%)</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">Clinical Services (Q1 2026)</h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>🔄 Encounter Service</li>
-              <li>🔄 Care Coordination</li>
-              <li>🔄 Appointment Service</li>
-              <li>📅 Lab Service (LIS)</li>
-              <li>📅 Pharmacy Service</li>
-              <li>📅 Imaging Service</li>
-              <li>📅 Prescription Service</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-6">
-            <h4 className="font-bold text-gray-900 mb-4">Platform Services (Q2 2026)</h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>📅 Billing & Claims</li>
-              <li>📅 Consent Management</li>
-              <li>📅 Notification Service</li>
-              <li>📅 Analytics Platform</li>
-              <li>📅 Audit Trail</li>
-              <li>📅 Document Service</li>
-              <li>📅 Terminology Service</li>
-            </ul>
-          </div>
+          {serviceRoadmap.map((section, idx) => (
+            <div key={idx} className="bg-gray-50 rounded-xl p-6">
+              <h4 className="font-bold text-gray-900 mb-4">
+                {section.title}{" "}
+                <span className="text-gray-500 font-normal">
+                  ({section.timeline})
+                </span>
+              </h4>
+
+              <ul className="space-y-2 text-sm text-gray-600">
+                {section.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

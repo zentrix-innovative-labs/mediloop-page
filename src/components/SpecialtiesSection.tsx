@@ -1,3 +1,6 @@
+import { Activity } from "lucide-react";
+import Image from "next/image";
+
 export default function SpecialtiesSection() {
   const specialties = [
     "Infectious Diseases (HIV, TB, Malaria)",
@@ -14,20 +17,33 @@ export default function SpecialtiesSection() {
     "Immunization",
     "Nutrition",
     "Eye & Dental Care",
-    "and 30+ more relevant to Uganda"
-  ]
+    "and 30+ more relevant to Uganda",
+  ];
 
   return (
     <section className="bg-gradient-to-br from-teal-50 to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-teal-600 font-medium uppercase tracking-wide text-sm mb-4">
-              FOR UGANDA'S HEALTH PRIORITIES
-            </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              40+ specialties for Uganda's needs
+            <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2 mb-6">
+              <Activity className="w-4 h-4 text-teal-600" />
+              <p className="text-teal-600 font-bold uppercase tracking-wide text-sm">
+                Comprehensive Medical Coverage
+              </p>
+            </div>
+
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-teal-600 to-green-700 bg-clip-text text-transparent">
+                40+ specialties
+              </span>{" "}
+              for Uganda's health needs
             </h2>
+
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              From infectious diseases to maternal care, mental health to
+              emergency medicine - Mediloop's AI is trained to support Uganda's
+              most critical healthcare priorities.
+            </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
               {specialties.map((specialty, index) => (
@@ -42,9 +58,11 @@ export default function SpecialtiesSection() {
           </div>
 
           <div className="relative">
-            <img
-              src="https://ext.same-assets.com/1157322651/1382299453.avif"
-              alt="Healthcare professional"
+            <Image
+              src="/med_tools.jpg"
+              height={600}
+              width={800}
+              alt="Healthcare professional/"
               className="w-full h-auto rounded-2xl shadow-2xl"
             />
             {/* Decorative floating elements */}
@@ -54,5 +72,5 @@ export default function SpecialtiesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
