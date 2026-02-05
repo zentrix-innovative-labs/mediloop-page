@@ -47,6 +47,29 @@ export default function CareersPage() {
     },
   ];
 
+  const whyJoinMediloop = [
+    {
+      icon: "🚀",
+      title: "Impactful Work",
+      description:
+        "Build technology that transforms healthcare for millions of Ugandans.",
+      bgColor: "bg-teal-100",
+    },
+    {
+      icon: "🌍",
+      title: "Global Scale, Local Focus",
+      description:
+        "Work on cutting-edge tech while making a difference in Uganda.",
+      bgColor: "bg-teal-200",
+    },
+    {
+      icon: "👥",
+      title: "Great Team",
+      description: "Join a passionate team of healthcare and tech experts.",
+      bgColor: "bg-teal-300",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -66,36 +89,20 @@ export default function CareersPage() {
             Why Join Mediloop?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
+            {whyJoinMediloop.map((item, idx) => (
+              <div
+                key={idx}
+                className="text-center shadow-sm shadow-[0_6px_15px_rgba(0,0,0,0.2)] hover:shadow-lg hover:shadow-[0_6px_15px_rgba(0,0,0,0.5)] rounded-xl p-6 transition-shadow duration-300"
+              >
+                <div
+                  className={`w-16 h-16 ${item.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
+                >
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Impactful Work</h3>
-              <p className="text-gray-700">
-                Build technology that transforms healthcare for millions of
-                Ugandans.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌍</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">
-                Global Scale, Local Focus
-              </h3>
-              <p className="text-gray-700">
-                Work on cutting-edge tech while making a difference in Uganda.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👥</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Great Team</h3>
-              <p className="text-gray-700">
-                Join a passionate team of healthcare and tech experts.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -105,7 +112,10 @@ export default function CareersPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {jobs.map((job, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+              <div
+                key={index}
+                className="bg-white rounded-lg p-6 shadow-sm shadow-[0_6px_15px_rgba(0,0,0,0.2)] hover:shadow-lg hover:shadow-[0_6px_15px_rgba(0,0,0,0.5)] rounded-xl p-6 transition-shadow duration-300"
+              >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {job.title}
                 </h3>

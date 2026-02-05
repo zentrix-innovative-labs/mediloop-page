@@ -19,7 +19,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Social Proof & Trust Signals */}
-      <PartnersSection />
+      {/* <PartnersSection /> */}
 
       {/* Core Features & Benefits */}
       <KeyFeaturesSection />
