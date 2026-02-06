@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AnnouncementBanner() {
   return (
@@ -9,18 +10,19 @@ export default function AnnouncementBanner() {
             Get Your Free Health ID Today
           </span>
           <span className="text-teal-700 text-sm sm:text-base">
-            Instant medical advice on WhatsApp - All your health records in one place - Free for every Ugandan
+            Instant medical advice on WhatsApp - All your health records in one
+            place - Free for every Ugandan
           </span>
-          <a
+          <Link
             href="https://mediloop.co"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-teal-900 text-white border border-teal-900 hover:bg-teal-800 hover:border-teal-800 rounded px-4 py-2 text-sm"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

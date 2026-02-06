@@ -3,19 +3,23 @@ export default function SettingsSection() {
     {
       title: "Patients and Caregivers",
       image: "https://ext.same-assets.com/1157322651/3267250880.avif",
-      description: "Supporting patient-provider interactions in Ugandan clinics and hospitals"
+      description:
+        "Supporting patient-provider interactions in Ugandan clinics and hospitals",
     },
     {
       title: "Outpatient and Inpatient",
-      image: "https://ext.same-assets.com/1157322651/1627134669.avif",
-      description: "Seamless documentation across all Ugandan care environments"
+      image:
+        "https://img.freepik.com/free-photo/doctor-writing-prescription-hospital_23-2149854062.jpg",
+      description:
+        "Seamless documentation across all Ugandan care environments",
     },
     {
       title: "Telehealth encounters",
-      image: "https://ext.same-assets.com/1157322651/3063892117.avif",
-      description: "Enhanced remote care documentation and workflows for Uganda"
-    }
-  ]
+      image: "/doc_showing_result.jpg",
+      description:
+        "Enhanced remote care documentation and workflows for Uganda",
+    },
+  ];
 
   return (
     <section className="bg-white py-20">
@@ -28,10 +32,7 @@ export default function SettingsSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {settings.map((setting, index) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer"
-            >
+            <div key={index} className="relative group cursor-pointer">
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={setting.image}
@@ -54,5 +55,5 @@ export default function SettingsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SecuritySection() {
   const securityFeatures = [
     "Bank-level encryption keeps your data safe",
@@ -5,8 +7,8 @@ export default function SecuritySection() {
     "Approved by Ugandan health authorities",
     "Your data never leaves Uganda",
     "Regular security checks and updates",
-    "24/7 monitoring and support"
-  ]
+    "24/7 monitoring and support",
+  ];
 
   return (
     <section className="bg-white py-20">
@@ -36,7 +38,9 @@ export default function SecuritySection() {
                     <div className="text-white font-bold">1000+ Providers</div>
                   </div>
                   <div>
-                    <div className="text-teal-200 text-sm mb-1">Patients served</div>
+                    <div className="text-teal-200 text-sm mb-1">
+                      Patients served
+                    </div>
                     <div className="text-white font-bold">50,000+</div>
                   </div>
                   <div>
@@ -51,9 +55,9 @@ export default function SecuritySection() {
               </div>
 
               <div className="mt-8">
-                <a href="/about" className="text-teal-200 hover:text-white">
+                <Link href="/about" className="text-teal-200 hover:text-white">
                   About Mediloop →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -61,8 +65,16 @@ export default function SecuritySection() {
               <div className="w-64 h-64 bg-teal-700 rounded-full flex items-center justify-center">
                 <div className="w-32 h-32 bg-teal-600 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -72,5 +84,5 @@ export default function SecuritySection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

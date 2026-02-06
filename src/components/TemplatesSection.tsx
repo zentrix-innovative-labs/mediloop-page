@@ -1,13 +1,21 @@
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 
 export default function TemplatesSection() {
   const languages = [
-    { flag: "🇺�", name: "English (Uganda)" },
-    { flag: "��", name: "Luganda" },
-    { flag: "��", name: "Runyankole" },
-    { flag: "��", name: "Acholi" },
-    { flag: "��", name: "Swahili" }
-  ]
+    {
+      flag: "🇬🇧",
+      name: "English (Uganda)",
+      color: "from-blue-500 to-cyan-500",
+    },
+    { flag: "🇺🇬", name: "Luganda", color: "from-green-500 to-emerald-500" },
+    {
+      flag: "🇺🇬",
+      name: "Runyankole",
+      color: "from-purple-500 to-indigo-500",
+    },
+    { flag: "🇺🇬", name: "Acholi", color: "from-orange-500 to-red-500" },
+    { flag: "🇹🇿", name: "Swahili", color: "from-teal-500 to-cyan-500" },
+  ];
 
   return (
     <section className="bg-white py-20">
@@ -17,11 +25,13 @@ export default function TemplatesSection() {
           <div className="bg-gradient-to-br from-green-100 to-teal-100 rounded-2xl p-8 text-center">
             <div className="grid grid-cols-3 gap-4 mb-8">
               {languages.map((lang, index) => (
-                <div
-                  key={index}
-                  className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl shadow-md mx-auto"
-                >
-                  {lang.flag}
+                <div key={index}>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl shadow-md mx-auto">
+                    {lang.flag}
+                  </div>
+                  <p className="text-center text-xs font-medium mt-2 text-teal-600">
+                    {lang.name.split(" ")[0]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -30,7 +40,9 @@ export default function TemplatesSection() {
               MULTILINGUAL (UGANDA)
             </p>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              English, Luganda, Runyankole, Acholi, Swahili<br />and more local languages
+              English, Luganda, Runyankole, Acholi, Swahili
+              <br />
+              and more local languages
             </h3>
           </div>
 
@@ -39,9 +51,7 @@ export default function TemplatesSection() {
             <p className="text-teal-200 font-medium uppercase tracking-wide text-sm mb-4">
               MAKE IT YOUR OWN
             </p>
-            <h3 className="text-2xl font-bold mb-6">
-              Customizable templates
-            </h3>
+            <h3 className="text-2xl font-bold mb-6">Customizable templates</h3>
 
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
@@ -64,11 +74,14 @@ export default function TemplatesSection() {
                 breath that started approximately two weeks ago.
               </p>
 
-              <div className="font-semibold mb-2">HISTORY OF PRESENT ILLNESS</div>
+              <div className="font-semibold mb-2">
+                HISTORY OF PRESENT ILLNESS
+              </div>
               <p className="mb-3">
-                Mr. Doe reports a cough that started approximately two weeks ago,
-                accompanied by occasional wheezing and difficulty breathing. He
-                denies any recent illnesses or exposures to sick contacts.
+                Mr. Doe reports a cough that started approximately two weeks
+                ago, accompanied by occasional wheezing and difficulty
+                breathing. He denies any recent illnesses or exposures to sick
+                contacts.
               </p>
 
               <div className="font-semibold mb-2">PAST MEDICAL HISTORY</div>
@@ -88,5 +101,5 @@ export default function TemplatesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

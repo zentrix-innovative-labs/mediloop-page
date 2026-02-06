@@ -1,14 +1,9 @@
-'use client'
+"use client";
 
-
-import { Star } from 'lucide-react'
+import { Star } from "lucide-react";
+import Link from "next/link";
 
 export default function TestimonialsSection() {
-
-
-
-
-
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
@@ -21,17 +16,19 @@ export default function TestimonialsSection() {
           ))}
         </div>
         <p className="text-lg text-gray-700 mb-8">
-          Join thousands of Ugandans already using Mediloop for secure healthcare access. Get your Universal Health ID, instant medical advice, and seamless provider connections.
+          Join thousands of Ugandans already using Mediloop for secure
+          healthcare access. Get your Universal Health ID, instant medical
+          advice, and seamless provider connections.
         </p>
-        <a
+        <Link
           href="https://app.mediloop.co"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold shadow hover:bg-teal-700 transition"
         >
           Get Started
-        </a>
+        </Link>
       </div>
     </section>
-  )
+  );
 }

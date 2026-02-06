@@ -1,13 +1,13 @@
-import Header from '@/components/Header'
-import AnnouncementBanner from '@/components/AnnouncementBanner'
-import HeroSection from '@/components/HeroSection'
-import PartnersSection from '@/components/PartnersSection'
-import KeyFeaturesSection from '@/components/KeyFeaturesSection'
-import ClinicalDocSection from '@/components/ClinicalDocSection'
-import DevelopersSection from '@/components/DevelopersSection'
-import SecuritySection from '@/components/SecuritySection'
-import TestimonialsSection from '@/components/TestimonialsSection'
-import Footer from '@/components/Footer'
+import Header from "@/components/Header";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
+import HeroSection from "@/components/HeroSection";
+import PartnersSection from "@/components/PartnersSection";
+import KeyFeaturesSection from "@/components/KeyFeaturesSection";
+import ClinicalDocSection from "@/components/ClinicalDocSection";
+import DevelopersSection from "@/components/DevelopersSection";
+import SecuritySection from "@/components/SecuritySection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Social Proof & Trust Signals */}
-      <PartnersSection />
+      {/* <PartnersSection /> */}
 
       {/* Core Features & Benefits */}
       <KeyFeaturesSection />
@@ -39,5 +39,5 @@ export default function Home() {
       {/* Footer with Links & Contact */}
       <Footer />
     </main>
-  )
+  );
 }
